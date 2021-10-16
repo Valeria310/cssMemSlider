@@ -12,7 +12,16 @@ a {
     margin: 0 auto;
 }
 .header {
-    flex: 0 1 5%;
+    flex: 0 1 7%;
+    background-color: #000;
+}
+.title {
+    height: 100%;
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main {
     flex: 1 0 auto;

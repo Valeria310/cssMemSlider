@@ -132,7 +132,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 1rem;
-    /* background-image: url(assets/mem5.jpg); */
     background-size: 100% 100%;
 }
 .slide-1 .slider-img .image {
@@ -198,4 +197,45 @@ a {
     background-repeat: no-repeat;
     background-position: left center;
     padding-right: 5%;
+}
+@media (max-width: 64rem){
+    .image {
+        height: 60%;
+    }
+    .slider-img {
+        justify-content: space-around;
+    }
+    .slider-controls {
+        right: 50%;
+        bottom: 34%;
+        padding-left: 0%;
+        transform: translateX(50%);
+    }
+}
+@media (max-width: 34rem){
+    .image {
+        height: 30%;
+    }
+    .slider-img {
+        justify-content: space-around;
+    }
+    .slider-controls {
+        right: 50%;
+        bottom: 46%;
+        padding-left: 0%;
+        transform: translateX(50%);
+    }
+    .slider-wrapper label span {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    .slider-wrapper label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 1.5rem;
+        position: relative;
+        width: 1.5rem;
+    }
 }

@@ -214,16 +214,19 @@ a {
 }
 @media (max-width: 34rem){
     .image {
-        height: 30%;
+        height: 50%;
     }
     .slider-img {
         justify-content: space-around;
     }
     .slider-controls {
         right: 50%;
-        bottom: 46%;
+        bottom: 42%;
         padding-left: 0%;
         transform: translateX(50%);
+    }
+    .slide-text {
+        font-size: 1.5rem;
     }
     .slider-wrapper label span {
         width: 0.5rem;
@@ -237,5 +240,18 @@ a {
         height: 1.5rem;
         position: relative;
         width: 1.5rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .date {
+        font-size: 1.5rem;
+    }
+    .github {
+        font-size: 1.5rem;
+        padding-left: 10%;
+    }
+    .rss {
+        width: 10%;
     }
 }

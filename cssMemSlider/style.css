@@ -1,0 +1,274 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 96%;
+    height: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.header {
+    flex: 0 1 7%;
+    background-color: #000;
+}
+.title {
+    height: 100%;
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    flex: 1 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(139, 138, 138);
+}
+.slider-wrapper {
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+.slider-wrapper > input {
+    display: none;
+}
+.slider-content {
+    flex: 1 0 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+}
+.slider-content-wrapper {
+    width: 500%;
+    height: 100%;
+    position: relative;
+    transition: all .7s;
+    display: flex;
+}
+.slider-item {
+    width: 100%;
+    height: 100%;
+}
+.slider-controls {
+    height: fit-content;
+    flex: 1 0 30%;
+    right: 2%;
+    bottom: 21%;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+    background-color: rgb(139, 138, 138);
+}
+.slider-wrapper label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+	height: 3rem;
+	position: relative;
+	width: 3rem;
+	
+}
+.slider-wrapper label span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.3rem solid rgb(187, 200, 255);
+    transition: all .1s;
+}
+
+#slide-1:checked ~ .slider-controls label:nth-of-type(1) span,
+#slide-2:checked ~ .slider-controls label:nth-of-type(2) span,
+#slide-3:checked ~ .slider-controls label:nth-of-type(3) span,
+#slide-4:checked ~ .slider-controls label:nth-of-type(4) span,
+#slide-5:checked ~ .slider-controls label:nth-of-type(5) span {
+	background: rgb(187, 200, 255);
+}
+#slide-1:checked ~ .slider-controls label:nth-of-type(1):hover span,
+#slide-2:checked ~ .slider-controls label:nth-of-type(2):hover span,
+#slide-3:checked ~ .slider-controls label:nth-of-type(3):hover span,
+#slide-4:checked ~ .slider-controls label:nth-of-type(4):hover span,
+#slide-5:checked ~ .slider-controls label:nth-of-type(5):hover span {
+	background: rgb(255, 255, 255);
+}
+.slider-wrapper label:hover span {
+    border-color: rgb(255, 255, 255);
+  }
+  .slider-wrapper label:active span {
+    transform: scale(0.7);
+  }
+#slide-1:checked ~ .slider-content > .slider-content-wrapper,
+#slide-1:checked ~ .text-slider-wrapper .text-slider-content{
+    left: 0%;
+}
+#slide-2:checked ~ .slider-content > .slider-content-wrapper,
+#slide-2:checked ~ .text-slider-wrapper .text-slider-content { 
+    left: -100%;
+}
+#slide-3:checked ~ .slider-content > .slider-content-wrapper,
+#slide-3:checked ~ .text-slider-wrapper .text-slider-content {
+    left: -200%;
+}
+#slide-4:checked ~ .slider-content > .slider-content-wrapper,
+#slide-4:checked ~ .text-slider-wrapper .text-slider-content {
+    left: -300%;
+}
+#slide-5:checked ~ .slider-content > .slider-content-wrapper,
+#slide-5:checked ~ .text-slider-wrapper .text-slider-content {
+    left: -400%;
+}
+.slider-img {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 6%;
+}
+.image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    background-size: 100% 100%;
+}
+.slide-1 .slider-img .image {
+    background-image: url(assets/mem1.jpg);
+}
+.slide-2 .slider-img .image {
+    background-image: url(assets/mem2.gif);
+}
+.slide-3 .slider-img .image {
+    background-image: url(assets/mem3.png);
+}
+.slide-4 .slider-img .image {
+    background-image: url(assets/mem4.gif);
+}
+.slide-5 .slider-img .image {
+    background-image: url(assets/mem5.jpg);
+}
+.image img {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.text-slider{
+    display: flex;
+}
+.text-slider-wrapper {
+    flex: 1 0 40%;
+    overflow: hidden;
+}
+.text-slider-content {
+    position: relative;
+    transition: all .3s;
+    display: flex;
+    width: 500%;
+}
+.slide-text {
+    width: 100%;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+.footer {
+    flex: 0 1 7%;
+    width: 100%;
+    background: #000;
+  }
+.footer-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.github {
+    display: block;
+    padding-left: 3%;
+    background-image: url(assets/github.svg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    line-height: 3rem;
+    color: #cbd5de;
+    font-size: 2.5rem;
+    transition: 0.3s;
+}
+.date {
+    font-size: 2.5rem;
+    color: #cbd5de;
+}
+.rss {
+    display: block;
+    position: relative;
+    width: 2%;
+    height: 4rem;
+    background-image: url(assets/rss.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-right: 5%;
+}
+@media (max-width: 70rem){
+    .slider-img {
+        height: 100%;
+    }
+    .slider-content {
+        height: 50%;
+    }
+    .text-slider-wrapper,
+    .slider-controls {
+        flex-basis: 100%;
+    }
+    .text-slider-wrapper {
+        order: 3;
+        height: 10%;
+    }
+    .slider-controls {
+        justify-content: center;
+        order: 2;
+        right: 50%;
+        bottom: 34%;
+        padding-left: 0%;
+    }
+}
+@media (max-width: 36rem){
+    .slide-text {
+        font-size: 1.5rem;
+    }
+    .slider-wrapper label span {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    .slider-wrapper label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 1.5rem;
+        position: relative;
+        width: 1.5rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .date {
+        font-size: 1.5rem;
+    }
+    .github {
+        font-size: 1.5rem;
+        padding-left: 10%;
+    }
+    .rss {
+        width: 10%;
+    }
+}
